@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogisite</title>
+  <link rel="stylesheet" href="/static/registration.css" />
+</head>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<p class=flashes style="list-style-type: none;">{{ message }}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+<body>
+  <img src="/static/goldenretriever.jpg" width="30%", height="50%"/>
+  <div class="container">
+    <h1>Register</h1>
+    <form id="registrationForm" , method="post">
+      <div class="form-control">
+        <input type="text" id="username" name="username" required>
+        <label for="username">Username</label>
+        <div id="usernameError" class="error-message"></div>
+      </div>
+      <div class="form-control">
+        <input type="email" id="email" name="email" required>
+        <label for="email">EMail</label>
+        <div id="emailError" class="error-message"></div>
+      </div>
+      <div class="form-control">
+        <input type="text" id="phoneNo" name="phoneNo" required>
+        <label for="phoneNo">Phone</label>
+        <div id="phoneError" class="error-message"></div>
+      </div>
+      <div class="form-control">
+        <input type="password" id="password" name="password" required>
+        <label for="password">Password</label>
+        <div id="passwordError" class="error-message"></div>
+      </div>
+      <div class="form-control">
+        <input type="password" id="confirmPassword" required>
+        <label for="confirmPassword">ConfirmPassword</label>
+        <div id="confirmPasswordError" class="error-message"></div>
+      </div>
+      <div class="buttons">
+        <button class="btn" onclick="validateForm()">Submit</button>
+        <button class="btn" onclick="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

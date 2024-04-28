@@ -1,0 +1,123 @@
+{% extends 'home.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dogisite</title>
+</head>
+
+
+
+<body style="background-color: steelblue;">
+ 
+  
+    <div class="box">
+      {% block title %}
+      <h1 style="color:rgb(255, 183, 0);font-size: 50px;margin-top:50px;">Dog Breeds</h1>
+      {% endblock %}
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <p class=flashes style="list-style-type: none;">{{ message }}</p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      {% block content %}
+      <center>
+      <div class="row">
+        <div class="card">
+          <h1>Akita</h1>
+          <img src="/static/akita.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Beagle</h1>
+          <img src="/static/beagle.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Border Collie</h1>
+          <img src="/static/bordercollie.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Dachshund</h1>
+          <img src="/static/dachshund.jpeg" />
+        </div>
+        <div class="card">
+          <h1>chihuahua</h1>
+          <img src="/static/chihuahua.jpeg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <h1>Labrador</h1>
+          <img src="/static/labrador.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Cocker Spaniel</h1>
+          <img src="/static/cockerspaniel.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Australian Shepherd</h1>
+          <img src="/static/australianshepherd.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Grey Hound</h1>
+          <img src="/static/greyhound.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Husky</h1>
+          <img src="/static/husky.jpeg" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <h1>Antolian Shepherd</h1>
+          <img src="/static/anatolianshepherd.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Bichon Frise</h1>
+          <img src="/static/bichonfrise.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Chinese Crested</h1>
+          <img src="/static/Chinesecrested.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Havanese</h1>
+          <img src="/static/havanese.jpeg" />
+        </div>
+        <div class="card">
+          <h1>Irish Setter</h1>
+          <img src="/static/irishsetter.jpeg" />
+        </div>
+      </div>
+      <div class="row"> 
+        <div class="card">
+        <h1>Labradoodle</h1>
+        <img src="/static/labradoodle.jpeg" />
+      </div>
+      <div class="card">
+        <h1>Shiba Inu</h1>
+        <img src="/static/ShibaInu.jpeg" />
+      </div>
+      <div class="card">
+        <h1>Whippet</h1>
+        <img src="/static/whippet.jpeg" />
+      </div>
+      <div class="card">
+        <h1>Basenji</h1>
+        <img src="/static/basenji.jpeg" />
+      </div>
+      <div class="card">
+        <h1>Poodle</h1>
+        <img src="/static/poodle.jpeg" />
+      </div>
+    </div>
+    </div>
+  </center>
+  {% endblock %}
+</body>
+
+</html>

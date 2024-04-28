@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#278db2;
+    color:white;
+    font-family:'Mulish',sans-serif;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    overflow:hidden;
+    margin:0;
+}
+.container{
+    background-color:rgb(235, 177, 16);
+    padding: 20px 40px;
+    border-radius:5px;
+    position: relative;
+    right:80px;
+}
+
+.container h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn{
+    cursor:pointer;
+    width:50%;
+    background-color:#278db2;
+    padding:10px;
+    font-size:16px;
+    border:0;
+    border-radius:5px;
+    margin-left:20px;
+    color:white;
+}
+
+.btn:focus{
+    outline:0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+.error-message{
+    color:red;
+    margin-top:5px;
+}
+.form-control {
+    position:relative;
+    margin:20px 0 50px;
+    width:300px;
+    z-index:999;
+}
+
+.form-control input{
+    background-color:transparent;
+    border:0;
+    border-bottom:2px #278db2 solid;
+    display:block;
+    width:100%;
+    font-size:18px;
+    color:#fff;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color:#278db2;
+}
+
+.form-control label{
+    position:absolute;
+    top:-30px;
+    left:0;
+}
+
+.form-control label span{
+    display:inline-block;
+    font-size:18px;
+    min-width:5px;
+    transition:0.3s cubic-bezier(0.68, -0.55,0.265,1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color:#278db2;
+    transform:translateY(-30px);
+}
+
+img{
+    z-index:-1;
+    position: relative;
+    left:20px;
+    border-radius: 50px;
+}

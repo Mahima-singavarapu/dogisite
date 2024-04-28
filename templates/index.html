@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogisite</title>
+    <link rel="Stylesheet" href="/static/style.css"/>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class=flashes style="list-style-type: none;">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="container">
+        <h1>Please Login</h1>
+        <form method="post">
+            <div class="form-control">
+                <input type="text" name="email" required>
+                <label>Email</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" name="password" required>
+                <label>Password</label>
+            </div>
+
+            <button class="btn">Login</button>
+
+            <p class="text">Don't have an account?<a href="{{url_for('register')}}">Register</a></p>
+        </form>
+    </div>
+    <img src="/static/corgi.jpg" width="40%" height="60%"/>
+</body>
+</html>
